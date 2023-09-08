@@ -3,37 +3,51 @@
 <head>
     <style>
         body {
-            background-color: #99edf8;
-            display: flex;
-            flex-direction: column;
-        }
-        .text {
-            color: white;
-            font-weight: bolder;
-            font-size: 8vh;
-            justify-items: center;
-            align-items: center;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        #naslov {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center; /* Optional, for text alignment */
-            margin-bottom: 0px;
-        }
-        .dugme {
-            margin-top: 20vh;
-            background-color: rgba(255,255,255,0.1);
-            color: white;
-            border-radius: 0.8vh;
-            border: 2px solid white;
-            width: 15vw;
-            height: 7vh;
-            font-size: 3vh;
-            font-weight: bolder;
-        }
+    background-color: #99edf8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh; /* Ensure full viewport height */
+}
+
+.text {
+    color: white;
+    font-weight: bolder;
+    font-size: 5vh; /* Adjust the font size to your liking */
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center; /* Optional, for text alignment */
+    margin: 0; /* Reset margin */
+}
+
+#naslov {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.dugme {
+    margin-top: 5vh; /* Adjust the margin based on your design */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 2vh; /* Adjust as needed */
+    border: 2px solid white;
+    width: 30%; /* Adjust the width based on your design */
+    height: 10vh; /* Adjust the height based on your design */
+    font-size: 3vh;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/* Media query for smaller screens if needed */
+@media (max-width: 768px) {
+    .text {
+        font-size: 4vh; /* Adjust the font size for smaller screens */
+    }
+    .dugme {
+        width: 60%; /* Adjust the width for smaller screens */
+    }
+}
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

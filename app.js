@@ -102,7 +102,7 @@ app.get('/game/:gameId', (req, res) => {
     }
     return res.sendFile(path.join(__dirname, 'public', 'game.html'));
 });
-app.listen(port, "192.168.1.117", () => {
+app.listen(port, "192.168.1.124", () => {
     console.log("Server has started");
 });
 setInterval(() => {
