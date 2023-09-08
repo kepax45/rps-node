@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: #99edf8;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .text {
+            color: white;
+            font-weight: bolder;
+            font-size: 8vh;
+            justify-items: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #results {
+            visibility: hidden;
+            margin: 0px
+        }
+        #naslov {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center; /* Optional, for text alignment */
+            margin-bottom: 0px;
+        }
+        .dugme {
+            margin-top: 20vh;
+            background-color: #8bcfca;
+            color: white;
+            border-radius: 0.8vh;
+            border-color: white;
+            width: 15vw;
+            height: 7vh;
+            font-size: 3vh;
+            font-weight: bolder;
+        }
+        #link {
+            display: flex;
+            border: 2px solid black;
+            border-radius: 1.5vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 20vw;
+        }
+        .choices {
+            visibility: hidden;
+            margin-top: 10vh;
+            margin-bottom: 10vh;
+        }
+        .choicebtn {
+            border-radius: 0.5vh;
+            border-color: white;
+            color: white;
+            height: 15vh;
+            width: 10vw;
+            font-size: 1pt;
+        }
+        .op_choicebtn {
+            border-radius: 0.5vh;
+            border-color: white;
+            color: white;
+            height: 15vh;
+            width: 10vw;
+        }
+        .loader {
+            border: 16px solid transparent; /* Light grey */
+            border-top: 16px solid white; /* Blue */
+            border-radius: 50%;
+            margin-top: 5vh;
+            width: 60px;
+            height: 60px;
+            animation: spin 2s linear infinite;
+            display: none;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #tick {
+            display: none;
+            margin-top: 5vh;
+            width: 60px;
+            height: 60px;
+        }
+        .dugme {
+            margin-top: 20vh;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 0.8vh;
+            border: 2px solid white;
+            width: 15vw;
+            height: 7vh;
+            font-size: 3vh;
+            font-weight: bolder;
+            display: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<body>
+    <h1 class="text" id="header">Waiting for opponent...</h1>
+    <h2 class="text" id="results">0 - 0</h2>
+    <div id="link"><a href="" id="linktext"></a></div>
+    <div class="choices">
+        <img class="choicebtn" id="rock1" src="../../assets/rock.svg" alt="Rock">
+        <img class="choicebtn" id="paper1" src="../../assetspaper.svg" alt="Paper">
+        <img class="choicebtn" id="scissors1" src="../../assets/scissors.svg" alt="Scissors">
+    </div>
+    <div class="loader" id="ldr"></div>
+    <img src="../../assets/success-tick2.svg" id="tick">
+    <button class="dugme" id="game-over-btn">PLAY AGAIN?</button>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="../game.js"></script>
+</body>
+</html>

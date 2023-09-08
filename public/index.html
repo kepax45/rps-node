@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: #99edf8;
+            display: flex;
+            flex-direction: column;
+        }
+        .text {
+            color: white;
+            font-weight: bolder;
+            font-size: 8vh;
+            justify-items: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #naslov {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center; /* Optional, for text alignment */
+            margin-bottom: 0px;
+        }
+        .dugme {
+            margin-top: 20vh;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 0.8vh;
+            border: 2px solid white;
+            width: 15vw;
+            height: 7vh;
+            font-size: 3vh;
+            font-weight: bolder;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS Game</title>
+    
+</head>
+<body>
+    <div id="naslov">
+        <h1 class="text"> ROCK, PAPER, SCISSORS</h1>
+        <h2 class="text"> ONLINE </h2>
+        <button class="dugme" id="create-game-btn"> CREATE A GAME</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
