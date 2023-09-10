@@ -106,9 +106,9 @@ app.listen(port, "192.168.1.124", () => {
     console.log("Server has started");
 });
 setInterval(() => {
-    console.log("Connections: " + connections);
-    console.log("Games: " + games);
-    console.log("Players: " + players);
+    console.log("CONNECTIONS: " + connections);
+    console.log("GAMES: " + games);
+    console.log("PLAYERS: " + players);
     for(let i = 0; i < 2; i++) {
         console.log();
     }

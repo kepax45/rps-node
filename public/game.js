@@ -1,6 +1,10 @@
 document.getElementById("linktext").href = window.location;
 document.getElementById("linktext").innerHTML = window.location;
-const socket = io(window.location.origin+":3000");
+function getLocationOrigin() {
+    splitted = window.location.origin.split(":")
+    return splitted[0]+":"+splitted[1];
+}
+const socket = io(getLocationOrigin()+":3000");
 socket.on("connect", () => {
     console.log("Connected to server!");
     socket.emit('data', window.location.pathname.split('/')[2]);
